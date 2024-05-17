@@ -18,3 +18,8 @@
     display: flex;
     background-color: var(--thirdColor);
 }
+
+.containerObject{
+    width: 100%;
+    height: 93%;
+}
