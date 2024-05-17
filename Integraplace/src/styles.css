@@ -1,0 +1,38 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    text-decoration: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root{
+    --primaryColor: #BDE038;
+    --primaryColorHover: #afd32d;
+    --secondaryColor: #10454F;
+    --thirdColor: #506266;
+    --fontColorPrimary: #000000;
+    --fontColorSecondary: #ffffff;
+    --primaryBackgroun: #ffffff;
+    --secondaryBackground: #f7f7f7;
+    --borderColor: #d9dee4;
+}
+
+.btnMenu{
+    color: #BDE038;
+}
+
+input, select:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.iconBtn{
+    padding-right: 10px;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+}

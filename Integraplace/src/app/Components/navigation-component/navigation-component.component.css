@@ -1,0 +1,55 @@
+.sidenav-container {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.sidenavStyles{
+    background-color: var(--primaryColor);
+    height: 100%;
+    color: var(--fontColorPrimary);
+}
+
+.matToolbar{
+    height: 6%;
+    background-color: var(--secondaryColor);
+}
+
+.btnHideNav{
+    background-color: transparent;
+    color: var(--fontColorPrimary);
+}
+
+.titleToolbar{
+    color: var(--fontColorSecondary);
+    font-weight: 500;
+}
+
+.iconBtn{
+    color: var(--fontColorPrimary);
+}
+
+.matNavList ul li{
+    padding: 20px 10px;
+}
+
+.matNavList ul li:hover{
+    background-color: var(--primaryColorHover);
+    cursor: pointer;
+}
+
+.contentContainer{
+    width: 100%;
+    height: 94%;
+    overflow: auto;
+    background-color: var(--secondaryBackground);
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        width: 150px; /* Ajuste conforme necessário */
+    }
+    .matToolbar {
+        height: 8%; /* Ajuste conforme necessário */
+    }
+}
+  

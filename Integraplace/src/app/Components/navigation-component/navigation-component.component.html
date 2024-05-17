@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenavStyles" #sidenav
+              [attr.role]="(toogleHide) ? 'dialog' : 'navigation'"
+              [mode]="(toogleHide) ? 'over' : 'side'"
+              [opened]="!(toogleHide)">
+      <mat-toolbar class="btnHideNav">
+          <button mat-icon-button (click)="toggleClose()">
+              <mat-icon>menu</mat-icon>
+          </button>
+      </mat-toolbar>
+     
+      <mat-nav-list class="matNavList">
+        <ul>
+          <li>
+            <a routerLink="/Venda"><mat-icon class="iconBtn">shopping_cart</mat-icon>Vendas</a>
+          </li>
+          <li>
+            <a routerLink="/Item"><mat-icon class="iconBtn">inventory_2</mat-icon>Item</a>
+          </li>
+          <li>
+            <a routerLink="/Cliente"><mat-icon class="iconBtn">person_4</mat-icon>Cliente</a>
+          </li>
+          <li>
+            <a routerLink="/Fornecedor"><mat-icon class="iconBtn">apartment</mat-icon>Fornecedor</a>
+          </li>
+          <li>
+            <a routerLink="/Ponto-de-Venda"><mat-icon class="iconBtn">store</mat-icon>Ponto de Venda</a>
+          </li>
+          <li>
+            <a routerLink="/Estoque"><mat-icon class="iconBtn">warehouse</mat-icon>Estoque</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="matToolbar">
+      <button mat-icon-button *ngIf="toogleHide" (click)="toggleOpen()">
+          <mat-icon class="btnHideNav">menu</mat-icon>
+      </button>
+      <p class="titleToolbar">Integraplace</p>
+    </mat-toolbar>
+
+    <div class="contentContainer">
+     <router-outlet></router-outlet>
+    </div>
+   
+  </mat-sidenav-content>
+</mat-sidenav-container>
