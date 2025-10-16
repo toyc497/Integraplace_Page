@@ -1,0 +1,45 @@
+<div class="container">
+    <header>
+        <h3>Informações do Pregão</h3>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <span>Portal:</span>
+                <p>Comprasnet</p>
+            </li>
+            <li>
+                <span>Identificador:</span>
+                <p>20012306050012029</p>
+            </li>
+            <li>
+                <span>Órgão:</span>
+                <p>Município de Quixabinha</p>
+            </li>
+            <li>
+                <span>Edital:</span>
+                <p>12345/2025</p>
+            </li>
+            <li>
+                <span>Lote:</span>
+                <p>0</p>
+            </li>
+            <li>
+                <span>Comentário:</span>
+                <input type="text" class="inpComment" [(ngModel)]="textCommentAux" value="{{textCommentAux}}">
+            </li>
+            <li>
+                <span>Status:</span>
+                <mat-radio-group aria-label="Selecione uma opção">
+                    <mat-radio-button value="victory" color="primary">Vitória</mat-radio-button>
+                    <mat-radio-button value="defeat" color="primary">Derrota</mat-radio-button>
+                    <mat-radio-button value="dispute" color="primary">Em disputa</mat-radio-button>
+                </mat-radio-group>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <button class="btnCancel" (click)="closeDialog()">Fechar</button>
+        <button class="btnSave" (click)="save()">Salvar</button>
+    </footer>
+</div>

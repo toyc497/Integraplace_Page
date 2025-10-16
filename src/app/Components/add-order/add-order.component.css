@@ -1,0 +1,138 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+header h3{
+    padding-left: 10px;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+section{
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+section ul{
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+section ul li{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section ul li input{
+    border: 1px solid var(--borderColor);
+    padding: 5px;
+    width: 70%;
+}
+
+.cardItem{
+    width: 100%;
+    height: 30%;
+}
+
+.titleItem{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: end;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.infoItem{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btnInserir{
+    padding: 5px 5px;
+    background-color: var(--secondColor);
+    color: var(--fontColor);
+    border: 0;
+}
+
+.btnInserir:hover{
+    cursor: pointer;
+}
+
+.itensView{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    overflow: auto;
+}
+
+.itemRow {
+  display: flex;
+  flex-direction: row;     
+  gap: 20px;             
+  list-style: none;      
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.itemRow li {
+  min-width: 80px;         
+  text-align: left;      
+}
+
+footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.btnCancel{
+    margin-right: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: var(--cardBackground);
+    border: 1px solid var(--borderColor);
+}
+
+.btnCancel:hover{
+    cursor: pointer;
+    background-color: var(--borderColor);
+}
+
+.btnSave{
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--secondColor);
+    color: var(--fontColor);
+    border: 0;
+}
+
+.btnSave:hover{
+    cursor: pointer;
+}

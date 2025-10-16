@@ -1,0 +1,55 @@
+<div class="container">
+    <header>
+        <h3>Criar Venda</h3>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <label for="partner">Cliente:</label>
+                <select name="partner" [(ngModel)]="bpr1Aux">
+                    <option *ngFor="let partner of listPartners" [ngValue]="partner.code">{{ partner.fullname }}</option>
+                </select>
+            </li>
+        </ul>
+    </section>
+    <div class="cardItem">
+        <div class="titleItem">
+            <p>Itens da Venda</p>
+        </div>
+        <div class="infoItem">
+            <div>
+                <label for="item">Item:</label>
+                <select name="item" [(ngModel)]="itemCodeAux">
+                    <option *ngFor="let item of listItems" [ngValue]="item.code">{{ item.name }}</option>
+                </select>
+            </div>
+            <div>
+                <label for="quantity">Quantidade:</label>
+                <input type="number" name="quantity" id="quantity" [(ngModel)]="quantAux" placeholder="45">
+            </div>  
+            <div>
+                <label for="price">Preço Unitário:</label>
+                <input type="number" name="price" id="price" [(ngModel)]="unitPriceAux" placeholder="1.99">
+            </div>
+            <div>
+                <label for="discount">Desconto (%):</label>
+                <input type="number" name="discount" id="discount" [(ngModel)]="discountAux" placeholder="30">
+            </div>
+            <div>
+                <button class="btnInserir" (click)="saveItems()">Inserir</button>
+            </div>
+        </div>
+    </div>
+    <div class="itensView">
+        <ul *ngFor="let item of listItemsAux" class="itemRow">
+            <li>{{item.item_code}}</li>
+            <li>{{item.quantity}}</li>
+            <li>{{item.unit_price}}</li>
+            <li>{{item.discount}}</li>
+        </ul>
+    </div>
+    <footer>
+        <button class="btnCancel" (click)="closeDialog()">Cancelar</button>
+        <button class="btnSave" (click)="saveOrder()">Salvar</button>
+    </footer>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <header>
+        <div class="buttonsContainer">
+            <button mat-fab extended (click)="openAddOrderDialog()"><mat-icon>add</mat-icon>Novo</button>
+        </div>
+        <div class="searchContainer">
+            <input type="search" id="searchInput" class="searchInput" [(ngModel)]="searchTerm" placeholder="Pesquisar (Código ou Nome)">
+            <button class="btnSearch" (click)="searchOrders()"><mat-icon>search</mat-icon></button>
+        </div>
+    </header>
+    <section>
+        <div class="cardContainer" *ngFor="let order of listOrders" (click)="setInfoOrder(order)">
+            <ul>
+                <li>
+                    <span>Código: </span>
+                    <p class="codeStyle">{{order.code}}</p>
+                </li>
+                <li>
+                    <span>Status: </span>
+                    <p class="fullnameStyle">{{order.status}}</p>
+                </li>
+                <li>
+                    <span>Valor Total: </span>
+                    <p class="typeStyle">{{order.totalprice}}</p>
+                </li>
+                <li>
+                    <span>Data de Criação: </span>
+                    <p class="ufStyle">{{formatDataPortal(order.data_doc)}}</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

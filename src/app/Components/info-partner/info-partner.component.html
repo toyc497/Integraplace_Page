@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="titleContainer">
+        <p>Detalhes do Parceiro</p>
+    </div>
+    <div class="infoContainer">
+        <div class="infoGrid">
+            <div class="codeStyle block">
+                <div class="spanStyle"><span>Código</span></div>
+                <div class="dataStyle">
+                    <span>{{partnerAux.code}}</span>
+                </div>
+            </div>
+            <div class="fullnameStyle block">
+                <div class="spanStyle"><span>Nome</span></div>
+                <div class="dataStyle">
+                    <span>{{partnerAux.fullname}}</span>
+                </div>
+            </div>
+            <div class="cpfcnpjStyle block">
+                <div class="spanStyle"><span>CPF/CNPJ</span></div>
+                <div class="dataStyle">
+                    <span>{{partnerAux.cpf_cnpj}}</span>
+                </div>
+            </div>
+            <div class="typeStyle block">
+                <div class="spanStyle"><span>Tipo</span></div>
+                <div class="dataStyle">
+                    <span>{{verifyTypeOfPartner(partnerAux.type)}}</span>
+                </div>
+            </div>
+            <div class="emailStyle block">
+                <div class="spanStyle"><span>Email</span></div>
+                <div class="dataStyle">
+                    <input type="email" class="inputStyles" name="emailPartner" id="emailPartner" [(ngModel)]="partnerAux.email" value="{{ partnerAux.email }}">
+                </div>
+            </div>
+            <div class="phoneStyle block">
+                <div class="spanStyle"><span>Telefone 1</span></div>
+                <div class="dataStyle">
+                    <input type="number" class="inputStyles" [(ngModel)]="partnerAux.phone1" value="{{ partnerAux.phone1 }}">
+                </div>      
+            </div>
+            <div class="phone2Style block">
+                <div class="spanStyle"><span>Telefone 2</span></div>
+                <div class="dataStyle">
+                    <input type="number" class="inputStyles" [(ngModel)]="partnerAux.phone2" value="{{ partnerAux.phone2 }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="adressContainer">
+        <div class="infoGridAddress">
+            <div class="cepStyle block">
+                <div class="spanStyle"><span>CEP</span></div>
+                <div class="dataStyle">
+                    <input type="number" class="inputStyles" [(ngModel)]="partnerAux.cep" value="{{ partnerAux.cep }}">
+                </div>
+            </div>
+            <div class="addressStyle block">
+                <div class="spanStyle"><span>Endereço</span></div>
+                <div class="dataStyle">
+                    <input type="text" class="inputStyles" [(ngModel)]="partnerAux.address" value="{{ partnerAux.address }}">
+                </div>
+            </div>
+            <div class="streetStyle block">
+                <div class="spanStyle"><span>Rua</span></div>
+                <div class="dataStyle">
+                    <input type="number" class="inputStyles" [(ngModel)]="partnerAux.streetnum" value="{{ partnerAux.streetnum }}">
+                </div>
+            </div>
+            <div class="cityStyle block">
+                <div class="spanStyle"><span>Cidade</span></div>
+                <div class="dataStyle">
+                    <input type="text" class="inputStyles" [(ngModel)]="partnerAux.city" value="{{ partnerAux.city }}">
+                </div>
+            </div>
+            <div class="blockStyle block">
+                <div class="spanStyle"><span>Bairro</span></div>
+                <div class="dataStyle">
+                    <input type="text" class="inputStyles" [(ngModel)]="partnerAux.block" value="{{ partnerAux.block }}">
+                </div>
+            </div>
+            <div class="ufStyle block">
+                <div class="spanStyle"><span>UF</span></div>
+                <div class="dataStyle">
+                    <input type="text" class="inputStyles" [(ngModel)]="partnerAux.uf" value="{{ partnerAux.uf }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ordersContainer">
+        <div class="infoGridActive">
+            <span>Ativo</span>
+            <input type="checkbox" class="isActive" name="isActive" id="isActive" [(ngModel)]="partnerAux.active" [ngModel]="partnerAux.active === 'Y'" (ngModelChange)="partnerAux.active = $event ? 'Y' : 'N'">
+        </div>
+    </div>
+    <div class="btnContainer">
+        <button class="btnCancel" (click)="cancel()">Cancelar</button>
+        <button class="btnUpdate" (click)="updatePartner()">Atualizar</button>
+    </div>
+</div>

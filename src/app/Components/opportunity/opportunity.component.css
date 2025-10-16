@@ -1,0 +1,201 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: var(--secondaryBackground);
+}
+
+.filterContainer{
+    width: 30%;
+    height: 95%;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: var(--cardColor);
+    border-radius: 10px;
+}
+
+.titleContainer{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.titleContainer span{
+    padding-left: 30px;
+    color: var(--secondColor);
+}
+
+.titleContainer p{
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--secondColor);
+}
+
+.sectionContainer{
+    height: 80%;
+}
+
+.btnContainer{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.btnContainer button:hover{
+    cursor: pointer;
+}
+
+.btnContainer .cleanFiltersBtn{
+    margin-right: 15px;
+    padding: 8px 30px;
+    color: var(--secondColor);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 0;
+    background-color: var(--cardColor);
+}
+
+.btnContainer .cleanFiltersBtn:hover{
+    background-color: var(--borderColor);
+}
+
+.btnContainer .searchFilterBtn{
+    margin-right: 10px;
+    padding: 9px 30px;
+    background-color: var(--secondColor);
+    color: var(--fontColor);
+    border: 0;
+    border-radius: 5px;
+}
+
+.btnContainer .searchFilterBtn:hover{
+    background-color: var(--firstColor);
+}
+
+/* -------------------- */
+
+.opContainer{
+    width: 70%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.opCardsContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.cardOp{
+    width: 95%;
+    height: 250px;
+    margin: 0px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cardColor);
+    border-radius: 10px;
+    box-shadow: -3px 3px var(--borderColor);
+}
+
+.infoSection{
+    width: 100%;
+}
+
+.titleCard{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleCard p{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondColor);
+}
+
+.titleCard button{
+    padding-right: 10px;
+    background-color: transparent;
+    color: var(--secondColor);
+    border: 0;
+}
+
+.titleCard button:hover{
+    cursor: pointer;
+}
+
+.objectDescription{
+    height: 35%;
+}
+
+.objectDescription p{
+    padding: 10px;
+    text-align: justify;
+}
+
+.infoData{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.infoData .publishDate{
+    padding-left: 10px;
+}
+
+.infoData .participate{
+    padding-right: 10px;
+}
+
+.infoData span{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondColor);
+}
+
+.btnCard{
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.btnCard button:hover{
+    cursor: pointer;
+}
+
+.loseBtn{
+    margin-right: 5px;
+    padding: 8px 30px;
+    color: var(--secondColor);
+    border: 1.5px solid var(--secondColor);
+    border-radius: 5px;
+    background-color: var(--cardColor);
+}
+
+.participateBtn{
+    margin-right: 10px;
+    padding: 9px 30px;
+    background-color: var(--secondColor);
+    color: var(--fontColor);
+    border: 0;
+    border-radius: 5px;
+}
+
+.participateBtn:hover{
+    background-color: var(--firstColor);
+}

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="filterContainer">
+        <div class="titleContainer">
+            <span><mat-icon>tune</mat-icon></span>
+            <p>Filtros</p>
+        </div>
+        <div class="sectionContainer"></div>
+        <div class="btnContainer">
+            <button class="cleanFiltersBtn">Limpar</button>
+            <button class="searchFilterBtn">Aplicar</button>
+        </div>
+    </div>
+    <div class="opContainer">
+        <div class="opCardsContainer">
+            <div class="cardOp" *ngFor="let opportunity of opportunityList">
+                <div class="infoSection titleCard">
+                    <p class="clientName">{{opportunity.orgao_nome}}</p>
+                    <button (click)="openInPncp(opportunity.url)"><mat-icon>open_in_new</mat-icon></button>
+                </div>
+                <div class="infoSection objectDescription">
+                    <p>{{opportunity.description | slice:0:280}}</p>
+                </div>
+                <div class="infoSection infoData">
+                    <div class="publishDate">
+                        <span>Data da Publicação</span>
+                        <p>{{opportunity.data_publicacao_pncp}}</p>
+                    </div>
+                    <div class="esferaType">
+                        <span>Esfera</span>
+                        <p>{{opportunity.esfera_nome}}</p>
+                    </div>
+                    <div class="modalidadeType">
+                        <span>Modalidade</span>
+                        <p>{{opportunity.modalidade_licitacao_nome}}</p>
+                    </div>
+                    <div class="participate">
+                        <span>Status</span>
+                        <p>{{opportunity.participar}}</p>
+                    </div>
+                </div>
+                <div class="infoSection btnCard">
+                    <button class="loseBtn" (click)="desistirAction(opportunity.id)">Desistir</button>
+                    <button class="participateBtn" (click)="participateAction(opportunity.id)">Participar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <header>
+        <h3>Cadastrar Pregão</h3>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <label for="systemName">Portal:</label>
+                <select name="systemName" [(ngModel)]="systemAux">
+                    <option *ngFor="let system of systemList" [value]="system">{{system}}</option>
+                </select>
+            </li>
+            <li>
+                <label for="id">Identificador:</label>
+                <input type="text" name="id" id="id" [(ngModel)]="idAux" placeholder="20012306050012029">
+            </li>
+            <li>
+                <label for="orgao">Órgão:</label>
+                <input type="text" name="orgao" id="orgao" [(ngModel)]="orgaoNameAux" placeholder="Município de Brasilinha">
+            </li>
+            <li>
+                <label for="edital">Edital:</label>
+                <input type="text" name="edital" id="edital" [(ngModel)]="editalAux" placeholder="12345/678">
+            </li>
+            <li>
+                <label for="lote">Lote:</label>
+                <input type="text" name="lote" id="lote" [(ngModel)]="loteAux" placeholder="1">
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <button class="btnCancel" (click)="closeDialog()">Cancelar</button>
+        <button class="btnSave" (click)="saveNewChat()">Salvar</button>
+    </footer>
+</div>

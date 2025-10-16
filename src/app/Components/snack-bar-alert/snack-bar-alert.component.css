@@ -1,0 +1,13 @@
+
+:host {
+    display: flex;
+    background-color: var(--secondColor);
+}
+
+.msgSnackBar {
+    color: var(--fontColor);
+}
+
+.btnClose {
+    color: var(--fontColor);
+}

@@ -1,0 +1,170 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- TÍTULO --- */
+.titleContainer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+
+.titleContainer p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-top: 20px;
+  color: var(--secondColor);
+}
+
+/* --- BLOCO DE INFORMAÇÕES PRINCIPAIS --- */
+.infoContainer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoGrid {
+  width: 96%;
+  height: 95%;
+  display: grid;
+  grid-template-areas:
+    "codeStyle fullnameStyle typeStyle"
+    "estoqueStyle estoqueNameStyle estoqueNameStyle";
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 30% 40% 30%;
+  border: 1px solid var(--secondColor);
+}
+
+.codeStyle {
+  grid-area: codeStyle;
+}
+.fullnameStyle {
+  grid-area: fullnameStyle;
+}
+.typeStyle {
+  grid-area: typeStyle;
+}
+.estoqueStyle {
+  grid-area: estoqueStyle;
+}
+.estoqueNameStyle {
+  grid-area: estoqueNameStyle;
+}
+
+/* --- BLOCO DE QUANTIDADES --- */
+.adressContainer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoGridEstoque {
+  width: 96%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 8px;
+  border: 1px solid var(--secondColor);
+}
+
+/* --- BLOCO DE DIMENSÕES --- */
+.ordersContainer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoGridSize {
+  width: 96%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  border: 1px solid var(--secondColor);
+}
+
+/* --- ESTILOS GERAIS --- */
+.block {
+  border: 1px solid var(--secondColor);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.spanStyle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondColor);
+  color: var(--fontColor);
+}
+
+.spanStyle span {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.dataStyle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dataStyle span {
+  padding-left: 5px;
+}
+
+.inputStyles {
+  height: 100%;
+  border: 0;
+  padding-left: 5px;
+}
+
+/* --- BOTÕES --- */
+.btnContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.btnContainer button:last-child {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.btnCancel {
+  margin-right: 5px;
+  padding: 8px 30px;
+  color: var(--secondColor);
+  border: 1.5px solid var(--secondColor);
+  border-radius: 5px;
+  background-color: var(--cardColor);
+  margin-bottom: 20px;
+}
+
+.btnCancel:hover{
+    cursor: pointer;
+}
+
+.btnUpdate {
+  padding: 9px 30px;
+  background-color: var(--secondColor);
+  color: var(--fontColor);
+  border: 0;
+  border-radius: 5px;
+}
+
+.btnUpdate:hover{
+    cursor: pointer;
+}

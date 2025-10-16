@@ -1,0 +1,117 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondaryBackground);
+}
+
+header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header button:first-child{
+    margin-left: 30px;
+}
+
+header button{
+    background-color: var(--secondColor);
+    border-radius: 5px;
+}
+
+section{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.card{
+    width: 96%;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: var(--cardBackground);
+    border: 1px solid var(--borderColor);
+    display: flex;
+    flex-direction: column;
+}
+
+.itemHeader{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemHeader div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.infoLabel{
+    padding-right: 10px;
+}
+
+.infoData{
+    padding: 5px 10px;
+    background-color: var(--borderColor);
+}
+
+.itemBar{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    background-color: var(--borderColor);
+}
+
+.itemBar h3{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.itemSection{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemSection ul{
+    display: flex;
+}
+
+.itemSection ul li{
+    display: inline-block;
+}
+
+.itemSection ul li .infoLabel{
+    padding-left: 40px;
+}
+
+.btnContainer{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.btnContainer span{
+    padding-right: 10px;
+    font-size: 0.9rem;
+}
+
+.btnContainer .isActive{
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+}

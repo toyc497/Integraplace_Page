@@ -1,0 +1,127 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cardBackground);
+}
+
+header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+header h3{
+    padding-left: 10px;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+section{
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+section .instructionsContainer p{
+    padding: 10px;
+    text-align: justify;
+}
+
+section .formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+section .formContainer span{
+    font-weight: 500;
+    padding-right: 30px;
+}
+
+section .formContainer input{
+    padding: 3px 0 3px 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+section .formContainer button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--thirdColor);
+    color: var(--fontColor);
+    border: 0;
+}
+
+section .formContainer button:hover{
+    cursor: pointer;
+}
+
+section .infoPartner{
+    margin: 30px;
+}
+
+section .infoPartner ul li{
+    display: flex;
+}
+
+section .infoPartner ul li span{
+    font-weight: 500;
+}
+
+section .infoPartner ul li p{
+    padding-left: 5px;
+}
+
+section .infoRes{
+    margin: 0px 10px 30px 30px;
+}
+
+section .infoRes .cardCertidao{
+    border-top: 1px solid;
+}
+
+section .infoRes .cardCertidao div{
+    display: flex;
+}
+
+section .infoRes .cardCertidao div h3{
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+section .infoRes .cardCertidao div span{
+    padding-right: 5px;
+    font-weight: 500;
+}
+
+footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.btnCancel{
+    margin-right: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: var(--cardBackground);
+    border: 1px solid var(--borderColor);
+}
+
+.btnCancel:hover{
+    cursor: pointer;
+    background-color: var(--borderColor);
+}

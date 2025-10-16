@@ -1,0 +1,33 @@
+<div class="container">
+    <header>
+        <div class="buttonsContainer">
+            <button mat-fab extended (click)="openAddItemDialog()"><mat-icon>add</mat-icon>Novo</button>
+        </div>
+        <div class="searchContainer">
+            <input type="search" id="searchInput" class="searchInput" [(ngModel)]="searchTerm" placeholder="Pesquisar (Código ou Nome)">
+            <button class="btnSearch" (click)="searchItems()"><mat-icon>search</mat-icon></button>
+        </div>
+    </header>
+    <section>
+        <div class="cardContainer" *ngFor="let item of listItems" (click)="setInfoItem(item)">
+            <ul>
+                <li>
+                    <span>Código: </span>
+                    <p class="codeStyle">{{item.code}}</p>
+                </li>
+                <li>
+                    <span>Nome: </span>
+                    <p class="fullnameStyle">{{item.name}}</p>
+                </li>
+                <li>
+                    <span>Tipo: </span>
+                    <p class="typeStyle">{{verifyTypeOfItem(item.type)}}</p>
+                </li>
+                <li>
+                    <span>Quantidade: </span>
+                    <p class="ufStyle">{{item.quantity}}</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,43 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav
+                [attr.role]="(toogleHide) ? 'dialog' : 'navigation'"
+                [mode]="(toogleHide) ? 'over' : 'side'"
+                [opened]="!(toogleHide)">
+
+        <mat-nav-list>
+            <a routerLink="/warehouse"><mat-icon class="iconBtn">warehouse</mat-icon>Estoque</a>
+            <a routerLink="/item"><mat-icon class="iconBtn">inventory_2</mat-icon>Item</a>
+            <a routerLink="/partner"><mat-icon class="iconBtn">person_4</mat-icon>Parceiro</a>
+            <a routerLink="/opportunity"><mat-icon class="iconBtn">checklist</mat-icon>Oportunidades</a>
+            <a routerLink="/chat"><mat-icon class="iconBtn">forum</mat-icon>Chat</a>
+            <a routerLink="#"><mat-icon class="iconBtn">model_training</mat-icon>AI</a>
+            <a routerLink="/order"><mat-icon class="iconBtn">shopping_cart</mat-icon>Vendas</a>
+            <a routerLink="/calendar"><mat-icon class="iconBtn">calendar_month</mat-icon>Eventos</a>
+            <a routerLink="/dashboard"><mat-icon class="iconBtn">bar_chart_4_bars</mat-icon>Desempenho</a>
+        </mat-nav-list>
+
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <div>
+            <img src="./assets/Integraplace_Logo_2.png" alt="Integraplace" class="logo">
+        </div>
+        <div class="functionsToolbarStyles">
+            <p>{{time}}</p>
+            <button mat-icon-button title="Notificações"><mat-icon matBadge="15">notifications</mat-icon></button>
+            <button mat-icon-button [matMenuTriggerFor]="menu" title="Perfil"><mat-icon>person</mat-icon></button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">
+                  <mat-icon>logout</mat-icon>
+                  <span>Sair</span>
+                </button>
+            </mat-menu>
+        </div>
+      </mat-toolbar>
+ 
+      <div class="contentContainerStyles">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

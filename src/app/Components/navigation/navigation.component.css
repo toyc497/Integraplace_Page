@@ -1,0 +1,84 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav{
+    width: 15%;
+    background-color: var(--firstColor);
+    border: 0;
+    overflow: auto;
+}
+
+mat-nav-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+mat-nav-list a{
+    padding: 20px 0px 20px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--thirdColor);
+    font-weight: 500;
+}
+
+mat-nav-list a:hover{
+    cursor: pointer;
+    color: var(--fourthColor);
+    font-size: 1rem;
+}
+
+mat-toolbar {
+    height: 10%;
+    background-color: var(--secondColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 15rem;
+    height: 3rem;
+}
+
+.functionsToolbarStyles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--fontColor);
+}
+
+.functionsToolbarStyles p{
+    padding-top: 12px;
+    padding-right: 20px;
+    font-size: 1rem;
+}
+
+.functionsToolbarStyles button{
+    color: var(--thirdColor);
+}
+
+.functionsToolbarStyles button:hover{
+    color: var(--fontColor);
+}
+
+.contentContainerStyles{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        width: 150px;
+    }
+    .matToolbar {
+        height: 8%;
+    }
+}

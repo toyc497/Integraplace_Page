@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="containerChat">
+        <div class="horizontalDivider">
+            <div class="sectionLeft">
+                <div class="title">
+                    <p>Chats</p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Pesquisar um chat">
+                </div>
+                <div class="addOp">
+                    <button (click)="openAddWarehouseDialog()"><mat-icon>add</mat-icon><p>Adicionar Pregão</p></button>
+                </div>
+                <div class="talks">
+                    <div class="talksSection">
+                        <div class="cardItem" *ngFor="let edital of editalList" (click)="findMessages(edital)">
+                            <div class="systemNicknameCard">
+                                <p>{{edital.portal.portal_acronym}}</p>
+                            </div>
+                            <div class="opNameCard">
+                                <p>{{edital.identifier}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sectionRight">
+                <header>
+                    <div class="systemNickname">
+                        <p>{{actualEdital!.portal.portal_acronym}}</p>
+                    </div>
+                    <div class="opName">
+                        <p>{{actualEdital!.identifier}}</p>
+                    </div>
+                </header>
+                <section>
+                    <div class="messageLineContainer" *ngFor="let message of messagesList">
+                        <div class="origin">
+                            <p>{{message.origin}}</p>
+                        </div>
+                        <div class="content">
+                            <p>{{message.content}}</p>
+                        </div>
+                        <div class="dateMessage">
+                            <p>{{formatDataPortal(message.message_date)}}</p>
+                            <p><mat-icon>done_all</mat-icon></p>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <button><mat-icon>delete</mat-icon></button>
+                    <button (click)="openInfoDialog()"><mat-icon>info</mat-icon></button>
+                    <button (click)="openAnalyzeCompetitorDialog()"><mat-icon>sensor_occupied</mat-icon></button>
+                    <button (click)="gotoPortal()"><mat-icon>near_me</mat-icon></button>
+                    <button><mat-icon>done_all</mat-icon></button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>

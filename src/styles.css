@@ -1,0 +1,33 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --firstColor: #05183c;
+    --secondColor: #06296b;
+    --thirdColor: #1b98e0;
+    --fourthColor: #fffbff;
+    --cardColor: #ffffff;
+    --fontColor: #ffffff;
+    --backgroundColor: #ffffff;
+    --secondaryBackground: #f2f1f1;
+    --cardBackground: #ffffff;
+    --borderColor: #d9dee4;
+    --deleteButton: #ff6961;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input, select:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

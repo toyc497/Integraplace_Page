@@ -1,0 +1,54 @@
+<div class="container">
+    <header>
+        <h3>Cadastrar Item</h3>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <label for="name">Nome:</label>
+                <input type="text" name="" id="name" [(ngModel)]="nameAux" placeholder="Nome">
+            </li>
+            <li>
+                <label for="type">Tipo:</label>
+                <select name="type" [(ngModel)]="typeAux">
+                    <option value="S">Serviço</option>
+                    <option value="M">Material</option>
+                </select>
+            </li>
+            <li>
+                <label for="warehouse">Estoque:</label>
+                <select name="warehouse" [(ngModel)]="wrhsAux">
+                    <option *ngFor="let wrhs of listWrhs" [value]="wrhs.code">{{wrhs.name}}</option>
+                </select>
+            </li>
+            <li>
+                <label for="quantity">Quantidade em Estoque (und):</label>
+                <input type="number" name="quantity" id="quantity" [(ngModel)]="quantAux" placeholder="45">
+            </li>
+            <li>
+                <label for="minimal_quantity">Quantidade Mínima Permitida (und):</label>
+                <input type="number" name="minimal_quantity" id="minimal_quantity" [(ngModel)]="minQuantAux" placeholder="45">
+            </li>
+            <li>
+                <label for="item_length">Cumprimento do Item (m):</label>
+                <input type="number" name="item_length" id="item_length" [(ngModel)]="lengthAux" placeholder="0.35">
+            </li>
+            <li>
+                <label for="item_height">Altura do Item (m):</label>
+                <input type="number" name="item_height" id="item_height" [(ngModel)]="heightAux" placeholder="0.35">
+            </li>
+            <li>
+                <label for="item_width">Largura do Item (m):</label>
+                <input type="number" name="item_width" id="item_width" [(ngModel)]="widthAux" placeholder="0.35">
+            </li>
+            <li>
+                <label for="item_weight">Peso do Item (Kg):</label>
+                <input type="number" name="item_weight" id="item_weight" [(ngModel)]="weightAux" placeholder="0.35">
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <button class="btnCancel" (click)="closeDialog()">Cancelar</button>
+        <button class="btnSave" (click)="saveItem()">Salvar</button>
+    </footer>
+</div>

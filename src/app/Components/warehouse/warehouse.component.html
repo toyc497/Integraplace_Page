@@ -1,0 +1,54 @@
+<div class="container">
+    <header>
+        <button mat-fab extended (click)="openAddWarehouseDialog()"><mat-icon>add</mat-icon>Novo</button>
+    </header>
+    <section>
+        <div class="card" *ngFor="let warehouse of warehouseList">
+            <div class="itemHeader">
+                <div>
+                    <span class="infoLabel">Nome</span>
+                    <span class="infoData">{{warehouse.name}}</span>
+                </div>
+                <div>
+                    <span class="infoLabel">Código</span>
+                    <span class="infoData">{{warehouse.code}}</span>
+                </div>
+            </div>
+            <div class="itemBar">
+                <h3>Endereço</h3>
+            </div>
+            <div class="itemSection">
+                <ul>
+                    <li>
+                        <span class="infoLabel">Cep</span>
+                        <span class="infoData">{{warehouse.cep}}</span>
+                    </li>
+                    <li>
+                        <span class="infoLabel">Endereço</span>
+                        <span class="infoData">{{warehouse.address}}</span>
+                    </li>
+                    <li>
+                        <span class="infoLabel">Rua</span>
+                        <span class="infoData">{{warehouse.streetnum}}</span>
+                    </li>
+                    <li>
+                        <span class="infoLabel">Cidade</span>
+                        <span class="infoData">{{warehouse.city}}</span>
+                    </li>
+                    <li>
+                        <span class="infoLabel">Bairro</span>
+                        <span class="infoData">{{warehouse.block}}</span>
+                    </li>
+                    <li>
+                        <span class="infoLabel">UF</span>
+                        <span class="infoData">{{warehouse.uf}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btnContainer">
+                <span>Ativo</span>
+                <input type="checkbox" class="isActive"name="isActive"id="isActive" [checked]="warehouse.active === 'Y'" (change)="onActiveChange($event, warehouse)">
+            </div>
+        </div>
+    </section>
+</div>

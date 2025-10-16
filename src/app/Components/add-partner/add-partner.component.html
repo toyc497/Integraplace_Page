@@ -1,0 +1,64 @@
+<div class="container">
+    <header>
+        <h3>Cadastrar Parceiro</h3>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <label for="name">Nome:</label>
+                <input type="text" name="" id="name" [(ngModel)]="nameAux" placeholder="Nome">
+            </li>
+            <li>
+                <label for="cpfcnpj">CPF/CNPJ:</label>
+                <input type="number" name="" id="cpfcnpj" [(ngModel)]="cpfcnpjAux" placeholder="18768498759">
+            </li>
+            <li>
+                <label for="type">Tipo:</label>
+                <select name="type" [(ngModel)]="typeAux">
+                    <option value="S">Fornecedor</option>
+                    <option value="C">Cliente</option>
+                </select>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="text" name="" id="email" [(ngModel)]="emailAux" placeholder="user@integraplace.com">
+            </li>
+            <li>
+                <label for="phone1">Telefone 1:</label>
+                <input type="number" name="" id="phone1" [(ngModel)]="phone1Aux" placeholder="61997845623">
+            </li>
+            <li>
+                <label for="phone2">Telefone 1:</label>
+                <input type="number" name="" id="phone2" [(ngModel)]="phone2Aux" placeholder="61997845623">
+            </li>
+            <li>
+                <label for="cep">Cep:</label>
+                <input type="number" name="" id="cep" [(ngModel)]="cepAux" placeholder="12.345-678" (blur)="consultCep()">
+            </li>
+            <li>
+                <label for="uf">UF:</label>
+                <input type="text" name="" id="uf" [(ngModel)]="ufAux" placeholder="SP">
+            </li>
+            <li>
+                <label for="address">Endereço:</label>
+                <input type="text" name="" id="address" [(ngModel)]="addressAux" placeholder="Quadra 1 Lote 2">
+            </li>
+            <li>
+                <label for="street">Rua:</label>
+                <input type="number" name="" id="street" [(ngModel)]="streetAux" placeholder="45">
+            </li>
+            <li>
+                <label for="city">Cidade:</label>
+                <input type="text" name="" id="city" [(ngModel)]="cityAux" placeholder="São Paulo">
+            </li>
+            <li>
+                <label for="block">Bairro:</label>
+                <input type="text" name="" id="block" [(ngModel)]="blockAux" placeholder="Copacabana">
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <button class="btnCancel" (click)="closeDialog()">Cancelar</button>
+        <button class="btnSave" (click)="savePartner()">Salvar</button>
+    </footer>
+</div>

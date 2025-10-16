@@ -1,0 +1,220 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.titleContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+.titleContainer p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: var(--secondColor);
+}
+
+.infoContainer{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoGrid{
+    width: 96%;
+    height: 95%;
+    display: grid;
+    grid-template-areas: "codeStyle fullnameStyle cpfcnpjStyle typeStyle" "emailStyle emailStyle phoneStyle phone2Style";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 20% 30% 25% 25%;
+    border: 1px solid var(--secondColor);
+}
+
+.codeStyle{
+    grid-area: codeStyle;
+}
+
+.fullnameStyle{
+    grid-area: fullnameStyle;
+}
+
+.cpfcnpjStyle{
+    grid-area: cpfcnpjStyle;
+}
+
+.typeStyle{
+    grid-area: typeStyle;
+}
+
+.emailStyle{
+    grid-area: emailStyle;
+}
+
+.phoneStyle{
+    grid-area: phoneStyle;
+}
+
+.phone2Style{
+    grid-area: phone2Style;
+}
+
+.block{
+    border: 1px solid var(--secondColor);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.spanStyle{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondColor);
+    color: var(--fontColor);
+}
+
+.spanStyle span{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.dataStyle{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dataStyle span{
+    padding-left: 5px;
+}
+
+.inputStyles{
+    height: 100%;
+    border: 0;
+    padding-left: 5px;
+}
+
+.adressContainer{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoGridAddress{
+    width: 96%;
+    height: 95%;
+    display: grid;
+    grid-template-areas: "cepStyle addressStyle streetStyle" "cityStyle blockStyle ufStyle";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 30% 40% 30%;
+    border: 1px solid var(--secondColor);
+}
+
+.cepStyle{
+    grid-area: cepStyle;
+}
+
+.addressStyle{
+    grid-area: addressStyle;
+}
+
+.streetStyle{
+    grid-area: streetStyle;
+}
+
+.cityStyle{
+    grid-area: cityStyle;
+}
+
+.blockStyle{
+    grid-area: blockStyle;
+}
+
+.ufStyle{
+    grid-area: ufStyle;
+}
+
+.ordersContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoGridActive{
+    width: 96%;
+    height: 100%;
+    border: 1.5px solid var(--secondColor);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.infoGridActive span{
+    padding-right: 10px;
+    font-size: 0.9rem;
+}
+
+.infoGridActive .isActive{
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.btnContainer{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.btnContainer button:last-child{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.btnCancel{
+    margin-right: 5px;
+    margin-bottom: 20px;
+    padding: 8px 30px;
+    color: var(--secondColor);
+    border: 1.5px solid var(--secondColor);
+    border-radius: 5px;
+    background-color: var(--cardColor);
+}
+
+.btnCancel:hover{
+    cursor: pointer;
+}
+
+.btnUpdate{
+    padding: 9px 30px;
+    background-color: var(--secondColor);
+    color: var(--fontColor);
+    border: 0;
+    border-radius: 5px;
+}
+
+.btnUpdate:hover{
+    cursor: pointer;
+}
+
+.success-snackbar {
+  background-color: var(--secondColor) !important;
+  color: var(--fontColor) !important;
+}
+
+.error-snackbar {
+  background-color: var(--secondColor) !important;
+  color: var(--fontColor) !important;
+}

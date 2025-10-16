@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="titleContainer">
+        <p>Detalhes da Venda</p>
+    </div>
+    <div class="infoOrderContainer">
+        <div class="infoOrderGrid">
+            <div class="codeStyle block">
+                <div class="spanStyle"><span>Código:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.code}}</span>
+                </div>
+            </div>
+            <div class="statusStyle block">
+                <div class="spanStyle"><span>Status:</span></div>
+                <div class="dataStyle">
+                    <input type="text" class="inputStyles" [(ngModel)]="orderAux.status" value="{{ orderAux.status }}">
+                </div>
+            </div>
+            <div class="priceStyle block">
+                <div class="spanStyle"><span>Valor Total:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.totalprice}}</span>
+                </div>
+            </div>
+            <div class="dateStyle block">
+                <div class="spanStyle"><span>Data de Criação:</span></div>
+                <div class="dataStyle">
+                    <span>{{formatDataPortal(orderAux.data_doc)}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="infoPartnerContainer">
+        <div class="infoPartnerGrid">
+            <div class="codeStyle block">
+                <div class="spanStyle"><span>Código:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.code}}</span>
+                </div>
+            </div>
+            <div class="nameStyle block">
+                <div class="spanStyle"><span>Nome:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.fullname}}</span>
+                </div>
+            </div>
+            <div class="cpfcnpjStyle block">
+                <div class="spanStyle"><span>CPF/CNPJ:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.cpf_cnpj}}</span>
+                </div>
+            </div>
+            <div class="emailStyle block">
+                <div class="spanStyle"><span>Email:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.email}}</span>
+                </div>
+            </div>
+            <div class="phoneStyle block">
+                <div class="spanStyle"><span>Telefone 1:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.phone1}}</span>
+                </div>
+            </div>
+            <div class="ufStyle block">
+                <div class="spanStyle"><span>UF:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.uf}}</span>
+                </div>
+            </div>
+            <div class="cityStyle block">
+                <div class="spanStyle"><span>Cidade:</span></div>
+                <div class="dataStyle">
+                    <span>{{orderAux.bpr1Client.city}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="infoItemsContainer">
+        <div class="infoItemGrid">
+            
+        </div>
+    </div>
+    <div class="btnContainer">
+        <button class="btnCancel" (click)="cancel()">Cancelar</button>
+        <button class="btnUpdate" (click)="updateOrder()">Atualizar</button>
+    </div>
+</div>

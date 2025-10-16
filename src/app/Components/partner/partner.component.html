@@ -1,0 +1,33 @@
+<div class="container">
+    <header>
+        <div class="buttonsContainer">
+            <button mat-fab extended (click)="openAddPartnerDialog()"><mat-icon>add</mat-icon>Novo</button>
+        </div>
+        <div class="searchContainer">
+            <input type="search" id="searchInput" class="searchInput" [(ngModel)]="searchTerm" placeholder="Pesquisar (Código ou Nome)">
+            <button class="btnSearch" (click)="searchPartners()"><mat-icon>search</mat-icon></button>
+        </div>
+    </header>
+    <section>
+        <div class="cardContainer" *ngFor="let partner of listPartners" (click)="setInfoPartner(partner)">
+            <ul>
+                <li>
+                    <span>Código: </span>
+                    <p class="codeStyle">{{partner.code}}</p>
+                </li>
+                <li>
+                    <span>Nome: </span>
+                    <p class="fullnameStyle">{{partner.fullname}}</p>
+                </li>
+                <li>
+                    <span>Tipo: </span>
+                    <p class="typeStyle">{{verifyTypeOfPartner(partner.type)}}</p>
+                </li>
+                <li>
+                    <span>UF: </span>
+                    <p class="ufStyle">{{partner.uf}}</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

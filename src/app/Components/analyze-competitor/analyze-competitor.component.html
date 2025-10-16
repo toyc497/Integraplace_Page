@@ -1,0 +1,45 @@
+<div class="container">
+    <header>
+        <h3>Analisar Concorrente</h3>
+    </header>
+    <section>
+        <div class="instructionsContainer">
+            <p>Com esta funcionalidade, você pode analisar um concorrente durante uma disputa de licitação, consultando automaticamente as bases do TCU, CNJ, CEIS e CNEP. Essa análise permite verificar a integridade e a regularidade da empresa ou pessoa, avaliando se ela está apta e em conformidade para contratar com a administração pública. Por se tratar de uma verificação completa em múltiplas bases, o processo <b>pode levar mais de 1 minuto</b> para ser concluído.</p>
+        </div>
+        <div class="formContainer">
+            <span>CNPJ:</span>
+            <input type="text">
+            <button>Analisar</button>
+        </div>
+        <div class="infoPartner">
+            <ul>
+                <li>
+                    <span>Razão Social:</span>
+                    <p>51.032.946 MATHEUS FILLIPE DE AZEVEDO SILVA</p>
+                </li>
+                <li>
+                    <span>CNPJ:</span>
+                    <p>51.032.946/0001-70</p>
+                </li>
+            </ul>
+        </div>
+        <div class="infoRes">
+            <div class="cardCertidao">
+                <div>
+                    <h3>CNIA - Cadastro Nacional de Condenações Cíveis por Ato de Improbidade Administrativa e Inelegibilidade</h3>
+                </div>
+                <div>
+                    <span>Situação:</span>
+                    <p>NADA_CONSTA</p>
+                </div>
+                <div>
+                    <span>Data/Hora da Emissão:</span>
+                    <p>10/05/2025 15:27</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <button class="btnCancel" (click)="closeDialog()">Fechar</button>
+    </footer>
+</div>

@@ -1,0 +1,248 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryBackground);
+}
+
+.containerChat{
+    width: 95%;
+    height: 90%;
+}
+
+.horizontalDivider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*SECTION LEFT*/
+
+.sectionLeft{
+    width: 25%;
+    height: 100%;
+    background-color: var(--firstColor);
+    border-right: 1px solid var(--borderColor);
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionLeft .title{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.sectionLeft .title p{
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--fontColor);
+}
+
+.sectionLeft .search{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionLeft .search input{
+    width: 90%;
+    background-color: var(--firstColor);
+    border: 1px solid var(--thirdColor);
+    border-radius: 5px;
+    padding: 8px 0px 8px 5px;
+    color: var(--fontColor);
+}
+
+.sectionLeft .addOp{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionLeft .addOp button{
+    display: flex;
+    flex-direction: row;
+    border: 0;
+    background-color: transparent;
+    color: var(--fontColor);
+    font-size: 0.9rem;
+}
+
+.sectionLeft .addOp button p{
+    padding-top: 5px;
+}
+
+.sectionLeft .addOp button:hover{
+    cursor: pointer;
+    color: var(--thirdColor);
+}
+
+.sectionLeft .talks{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.talksSection{
+    width: 90%;
+    height: 95%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--thirdColor);
+    border-radius: 10px;
+}
+
+.talksSection .cardItem{
+    width: 100%;
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.talksSection .cardItem:hover{
+    background-color: var(--secondColor);
+    cursor: pointer;
+}
+
+.systemNicknameCard{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: var(--thirdColor);
+}
+
+.systemNicknameCard p{
+    padding-top: 12px;
+    font-size: 1rem;
+    color: var(--fontColor);
+}
+
+.opNameCard p{
+    padding-top: 8px;
+    font-size: 0.9rem;
+    color: var(--fontColor);
+}
+
+.sectionRight{
+    width: 75%;
+    height: 100%;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--firstColor);
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.systemNickname{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    background-color: var(--thirdColor);
+}
+
+.systemNickname p{
+    padding-top: 12px;
+    font-size: 1rem;
+    color: var(--fontColor);
+}
+
+.opName p{
+    padding-left: 10px;
+    padding-top: 8px;
+    font-size: 1rem;
+    color: var(--fontColor);
+}
+
+/*SECTION*/
+
+section{
+    width: 100%;
+    height: 75%;
+    background-color: var(--secondColor);
+    overflow: auto;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+section .messageLineContainer{
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--fontColor);
+    padding: 5px 10px;
+    margin: 10px 15px 10px 15px;
+    border-radius: 15px;
+    border: 0;
+    background-color: var(--thirdColor);
+}
+
+.content{
+    text-align: justify;
+}
+
+.dateMessage{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--firstColor);
+    border-top: 1px solid var(--borderColor);
+    border-bottom: 0;
+}
+
+footer button{
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    color: var(--fontColor);
+}
+
+footer button:hover{
+    cursor: pointer;
+    color: var(--thirdColor);
+}

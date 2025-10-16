@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="titleContainer">
+    <p>Detalhes do Item</p>
+  </div>
+  <div class="infoContainer">
+    <div class="infoGrid">
+      <div class="codeStyle block">
+        <div class="spanStyle"><span>Código</span></div>
+        <div class="dataStyle">
+          <span>{{ itemAux.code }}</span>
+        </div>
+      </div>
+      <div class="fullnameStyle block">
+        <div class="spanStyle"><span>Nome</span></div>
+        <div class="dataStyle">
+          <span>{{ itemAux.name }}</span>
+        </div>
+      </div>
+      <div class="typeStyle block">
+        <div class="spanStyle"><span>Tipo</span></div>
+        <div class="dataStyle">
+          <span>{{ verifyTypeOfItem(itemAux.type) }}</span>
+        </div>
+      </div>
+      <div class="estoqueStyle block">
+        <div class="spanStyle"><span>Código do Estoque</span></div>
+        <div class="dataStyle">
+          <span>{{ itemAux.wrhs_father.code }}</span>
+        </div>
+      </div>
+      <div class="estoqueNameStyle block">
+        <div class="spanStyle"><span>Estoque</span></div>
+        <div class="dataStyle">
+          <span>{{ itemAux.wrhs_father.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="adressContainer">
+    <div class="infoGridEstoque">
+      <div class="quantStyle block">
+        <div class="spanStyle"><span>Quantidade em Estoque</span></div>
+        <div class="dataStyle">
+            <input type="number" class="inputStyles" [(ngModel)]="itemAux.quantity" value="{{ itemAux.quantity }}">
+        </div>
+      </div>
+      <div class="minQuantStyle block">
+        <div class="spanStyle"><span>Quantidade Mínima Permitida</span></div>
+        <div class="dataStyle">
+          <input
+            type="number"
+            class="inputStyles"
+            [(ngModel)]="itemAux.minimal_quantity"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ordersContainer">
+    <div class="infoGridSize">
+      <div class="block">
+        <div class="spanStyle"><span>Comprimento (m)</span></div>
+        <div class="dataStyle"><span>{{ itemAux.item_length }}</span></div>
+      </div>
+      <div class="block">
+        <div class="spanStyle"><span>Altura (m)</span></div>
+        <div class="dataStyle"><span>{{ itemAux.item_height }}</span></div>
+      </div>
+      <div class="block">
+        <div class="spanStyle"><span>Largura (m)</span></div>
+        <div class="dataStyle"><span>{{ itemAux.item_width }}</span></div>
+      </div>
+      <div class="block">
+        <div class="spanStyle"><span>Peso (Kg)</span></div>
+        <div class="dataStyle"><span>{{ itemAux.item_weight }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="btnContainer">
+    <button class="btnCancel" (click)="cancel()">Cancelar</button>
+    <button class="btnUpdate" (click)="updateItem()">Atualizar</button>
+  </div>
+</div>
